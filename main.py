@@ -18,6 +18,7 @@ screen.bgcolor('black')
 screen.title('Pong')
 screen.tracer(0)
 
+# Initiating the paddles
 r_paddle = Paddle((350, 0))
 l_paddle = Paddle((-350, 0))
 
@@ -38,10 +39,10 @@ results = ScoreBoard()
 game_on = True
 
 while game_on:
+    # Delay the code for a split second, then update the screen and move the ball
     time.sleep(ball.move_speed)
     screen.update()
     ball.move_ball()
-
     
     # Detect a collision with the wall
     if ball.ycor() > 290 or ball.ycor() < -290:
