@@ -19,7 +19,7 @@ class Paddle(Turtle):
         self.penup()
         self.goto(position)
 
-    # Initiate the variables/ keystrokes to move the paddle
+    # Initiate the variables/ keystrokes to move the paddle up and down
     def go_up(self):
         new_y = self.ycor() + 20
         self.goto(self.xcor(), new_y)
